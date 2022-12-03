@@ -1,0 +1,124 @@
+* {
+    margin: 40px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(211, 135, 135);
+}
+
+.tela{
+    width: 80%;
+    height: 500px;
+    border: 0px solid rgb(0, 0, 0);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(10, 137, 255);
+    cursor: none;
+
+}
+
+.terra{
+    width: 9000px;
+    height: 30px;
+    border: 20px solid rgb(85, 66, 3);
+    position: absolute;
+    bottom: -10%;
+    right: -50px;
+}
+
+.grama{
+    width: 9000px;
+    height: 10px;
+    border: 30px solid rgb(0, 177, 15);
+    position: absolute;
+    bottom: -12%;
+    right: -50%;
+}
+
+.cano{
+    width: 80px;
+    position: absolute;
+    bottom: 0;
+    animation: animacao-cano 2s infinite linear;
+
+}
+
+.mario{
+    width: 140px;
+    left: 0;
+    position: absolute;
+    bottom: 0;
+}
+
+.nuvem{
+    width: 500px;
+    position: absolute;
+    bottom: 40%;
+    animation: animacao-nuvem 30s infinite linear;
+}
+
+.titulo{
+    border: 6px solid black;
+    display: inline-block;
+    position: absolute;
+    left: 35%;
+    top: -80px;
+    font-size: 30px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+@keyframes animacao-cano {
+    from{
+        right: -14.1%;
+    }
+
+    to{
+        right: 100%;
+    }
+    
+}
+
+@keyframes pulo-mario {
+    0%{
+        bottom: 0;
+    }
+
+    25% {
+        bottom: 140px;
+    }
+
+    50%{
+        bottom: 140px;
+    }
+
+    70%{
+        bottom: 140px;
+    }
+
+    100%{
+        bottom: 0;
+    }
+
+
+}
+
+
+@keyframes animacao-nuvem {
+    from{
+        left: 96%;
+    }
+    to{
+        left: -65%;
+    }
+}
+
+
+.jump{
+    animation: pulo-mario 850ms ease-out;
+
+}
+
